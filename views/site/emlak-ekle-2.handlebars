@@ -1,0 +1,121 @@
+<div class="wrapper">
+    <div class="sidebar">
+        {{> sidebar}}
+    </div>
+    <div class="main_content">
+        <div class="header">
+            {{> header}}
+        </div>  
+        <div class="info">
+            <div class="baslik-text" >
+                <p style="font-size: x-large; font-weight: 500; margin: 20px 30px 15px 5%; display: inline-block" >Konum Bilgileri</p> 
+            </div>
+
+            <div class="progressbar-container">
+              <ul class="progressbar">
+                  <li >Temel</li>
+                  <li class="active">Konum</li>
+                  <li>Belgeler</li>
+                  <li>Ek Özellikler</li>
+              </ul>
+            </div>
+
+            <!-- Ev 1  -->
+            <div class="emlak-ornek">
+                <div class="emlak-ornek-text" >
+                    <form action="/emlaklar/emlak-ekle-2" method="POST">
+                        <div style="transform: translateY(130%);">Ülke:</div>
+                            <!-- Surround the select box within a "custom-select" DIV element.
+                            Remember to set the width: -->
+                            <div class="emlak-box">
+                                <label class="emlak-input-label" >Girin</label>
+                                <input required type="text" class="emlak-input" name="ulke" onfocus="focusSearchEmlak(0)" onfocusout="notfocusSearchEmlak(0)" >
+                            </div>
+
+                            <div style="transform: translateY(130%);">Şehir:</div>
+                            <!-- Surround the select box within a "custom-select" DIV element.
+                            Remember to set the width: -->
+                            <div class="emlak-box">
+                                <label class="emlak-input-label" >Girin</label>
+                                <input required type="text" class="emlak-input" name="sehir" onfocus="focusSearchEmlak(1)" onfocusout="notfocusSearchEmlak(1)" >
+                            </div>
+
+                            <div style="transform: translateY(130%);">İlçe:</div>
+                            <!-- Surround the select box within a "custom-select" DIV element.
+                            Remember to set the width: -->
+                            <div class="emlak-box">
+                                <label  class="emlak-input-label" >Girin</label>
+                                <input required type="text" class="emlak-input" name="ilce" onfocus="focusSearchEmlak(2)" onfocusout="notfocusSearchEmlak(2)" >
+                            </div>
+
+                            <div style="transform: translateY(130%);">Mahalle:</div>
+                            <!-- Surround the select box within a "custom-select" DIV element.
+                            Remember to set the width: -->
+                            <div class="emlak-box">
+                                <label class="emlak-input-label" >Girin</label>
+                                <input required type="text" class="emlak-input" name="mahalle" onfocus="focusSearchEmlak(3)" onfocusout="notfocusSearchEmlak(3)" >
+                            </div>
+
+                            <div style="transform: translateY(130%);">Sokak:</div>
+                            <!-- Surround the select box within a "custom-select" DIV element.
+                            Remember to set the width: -->
+                            <div class="emlak-box">
+                                <label class="emlak-input-label" >Girin</label>
+                                <input type="text" class="emlak-input" name="sokak" onfocus="focusSearchEmlak(4)" onfocusout="notfocusSearchEmlak(4)" >
+                            </div>
+
+                            <div style="transform: translateY(130%);">Cadde:</div>
+                            <!-- Surround the select box within a "custom-select" DIV element.
+                            Remember to set the width: -->
+                            <div class="emlak-box">
+                                <label class="emlak-input-label" >Girin</label>
+                                <input type="text" class="emlak-input" name="cadde" onfocus="focusSearchEmlak(5)" onfocusout="notfocusSearchEmlak(5)" >
+                            </div>
+
+                            <div style="transform: translateY(130%);">Apartman No:</div>
+                            <!-- Surround the select box within a "custom-select" DIV element.
+                            Remember to set the width: -->
+                            <div class="emlak-box">
+                                <label class="emlak-input-label" >Girin</label>
+                                <input required type="text" class="emlak-input" name="apart_no" onfocus="focusSearchEmlak(6)" onfocusout="notfocusSearchEmlak(6)" >
+                            </div>
+
+                            <div style="transform: translateY(130%);">Daire No:</div>
+                            <!-- Surround the select box within a "custom-select" DIV element.
+                            Remember to set the width: -->
+                            <div class="emlak-box">
+                                <label  class="emlak-input-label" >Girin</label>
+                                <input type="text" class="emlak-input" name="daire_no" onfocus="focusSearchEmlak(7)" onfocusout="notfocusSearchEmlak(7)" >
+                            </div>
+
+                            <div style="transform: translateY(130%);">Posta Kodu:</div>
+                            <!-- Surround the select box within a "custom-select" DIV element.
+                            Remember to set the width: -->
+                            <div class="emlak-box">
+                                <label class="emlak-input-label" >Girin</label>
+                                <input type="text" class="emlak-input" name="posta_kodu" onfocus="focusSearchEmlak(8)" onfocusout="notfocusSearchEmlak(8)" >
+                            </div>
+
+
+
+                        <button style="display: inline;" type="submit" id="emlak-devam-button">Devam et -></button>
+
+                    </form>
+                   
+       
+
+             </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+    <script src="/js/emlak-ekle-2/search.js"></script>
+    <script src="/js/emlak-ekle-2/search-emlak.js"></script>
+    <script src="/js/emlak-ekle-2/select-operation.js"></script>
+    <script src="/js/emlak-ekle-2/map.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaegWWKYSEpfEQCxsgth2BONY1i_oSF7A&callback=myMap"></script>

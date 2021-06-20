@@ -1,0 +1,72 @@
+
+<div class="wrapper">
+    <div class="sidebar">
+        {{> sidebar}}
+    </div>
+    <div class="main_content">
+        <div class="header">
+            {{> header}}
+        </div>  
+        <div class="info">
+            <div class="baslik-text" >
+                <p style="font-size: x-large; font-weight: 500; margin: 20px 30px 15px 5%; display: inline-block" >Doküman Ekle</p> 
+            </div>
+
+            <br><br><br>
+
+
+            <form action="/dokumanlar/belge-ekle" method="POST" id="belge-ekle" enctype="multipart/form-data"></form>
+
+
+            <div class="belge-text" >
+                <div style="transform: translateY(130%);" >Belge Adı:</div>
+                <!-- Surround the select box within a "custom-select" DIV element.
+                Remember to set the width: -->
+                <div class="belge-box">
+                    <label for="belge-input"class="belge-input-label" >Belge adı zorunludur</label>
+                    <input required type="text" form="belge-ekle" class="belge-input" name="name" onfocus="focusSearchBelge(0)" onfocusout="notfocusSearchBelge(0)" >
+                </div>            
+            </div>
+            <br><br>
+
+            <div class="belge-text" >
+                <div style="transform: translateY(130%);" >Belge Numarası:</div>
+                <!-- Surround the select box within a "custom-select" DIV element.
+                Remember to set the width: -->
+                <div class="belge-box">
+                    <label for="belge-input"class="belge-input-label" >Girilmezse otomatik atanır</label>
+                    <input type="text" form="belge-ekle" class="belge-input" name="numara" onfocus="focusSearchBelge(1)" onfocusout="notfocusSearchBelge(1)" >
+                </div>            
+            </div>
+            <br><br>
+
+            <div class="belge-text" >
+                <div style="transform: translateY(130%);" >Belge Açıklaması:</div>
+                <!-- Surround the select box within a "custom-select" DIV element.
+                Remember to set the width: -->
+                <div class="belge-box">
+                    <label for="belge-input"class="belge-input-label" >İsteğe bağlı</label>
+                    <input type="text" form="belge-ekle" class="belge-input" name="aciklama" onfocus="focusSearchBelge(2)" onfocusout="notfocusSearchBelge(2)" >
+                </div>            
+            </div>
+
+
+            <div id="fileupload">
+                <input id="files-input" form="belge-ekle" name="belge" type="file" onchange="filesChange(this)">
+                <p id="files-text" >Lütfen yüklemek istediğiniz dosyayı seçin ya da sürükleyin.</p>
+                <img id="image" src="/images/icon_upload.png" style="margin-left: 32%;" alt="Emlak Örnek Görsel" width="200px" >
+
+
+                <!--
+                    <button type="submit">Devam Et -></button>
+                -->
+            </div>
+            <button type="submit" form="belge-ekle" style="display: inline; margin-left: 5%; transform: translateY(-50%);" id="dokuman-yukle-button">Gönder -></button>
+            <br><br><br><br><br><br>
+        </div>
+    </div>
+</div>
+
+<script src="/js/dokumanlar-belge-ekle/search.js"></script>
+<script src="/js/dokumanlar-belge-ekle/search-belge.js"></script>
+<script src="/js/dokumanlar-belge-ekle/file-upload.js"></script>

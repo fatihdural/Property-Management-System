@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş Ekranı</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="/css/{{style}}">
+
+</head>
+<body>
+    <img id="image" src="/images/giris_ekrani_goruntu.png"  alt="Giriş Sol Görsel">
+
+    <div class="yazi-class" >
+        <h1 >EMLAK YÖNETİM PLATFORMU</h1>         
+        <h3> Hoşgeldin! Lütfen hesabına giriş yap.</h2><br><br><br>
+
+        <form id="login-box" action="/login" method="POST">
+            <div class="user-box">
+              <input type="text" name="username" id="username-input" required>
+              <label>Kullanıcı adı</label>
+            </div>
+            <div class="user-box">
+              <input type="password" name="password" id="password-input" required >
+              <label>Şifre</label>
+            </div>  
+        </form>
+        <br><br>
+        <span class="checkbox">
+            <input type="checkbox" value="remember-me" id="remember_me"> Beni hatırla
+        </span>
+
+        <span>
+            <a class="sifremi-unuttum" href="/login/sifremi-unuttum" title="Şifremi Unuttum" 
+            style="color: #4D4F5C; text-decoration: none;"
+            >
+                Şifremi Unuttum   
+        </a>
+        </span>
+        <br><br><br><br>
+        <button id="login-button" style="display: inline; cursor: pointer;" type="submit" form="login-box" >Giriş Yap</button>
+        
+        <a href="/login/kayit-ol" style="text-decoration: none;">
+            <button id="register-button" style="display: inline; cursor: pointer;">Kayıt Ol</button>
+        </a>
+        <a class="kullanim-kosulu" href="/documents/kullanim-kosulu.txt" 
+        download="kullanim-kosulu.txt"
+        target="_blank" title="Kullanım koşulu">
+            Kullanım koşulu. Gizlilik Politikası
+        </a>
+    </div> 
+
+    
+</body>
+</html>

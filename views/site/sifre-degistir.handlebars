@@ -1,0 +1,56 @@
+<div class="wrapper">
+    <div class="sidebar">
+        {{> sidebar}}
+    </div>
+    <div class="main_content">
+        <div class="header">
+            {{> header}}
+        </div>  
+        <div class="info">
+            <br>
+            <div class="baslik-text" >
+                <p style="font-size: 30px; margin-left:50px;" >Profil</p> 
+            </div>
+
+            <!-- Ev 1  -->
+            <div class="emlak-ornek" >
+                <!--
+                    <img id="image" src="{{user.kapak_image}}" style="float: left;" alt="Emlak Örnek Görsel" width="200px" >
+                -->
+
+                <form action="/profil/sifre-degistir" method="POST">
+
+                    <div class="emlak-ornek-text" >
+                        <span style="text-decoration: underline; font-size: 28px; font-weight: 550;" >Şifre Değiştir</span>
+                        <span onclick="window.location = '/profil'" style=" cursor:pointer; text-decoration: underline; margin-left:100px; font-size: 18px; font-weight: 550;" >Profili Düzenle</span>
+
+                        <br><br>
+
+                        <div style="transform: translateY(170%);">Mevcut Şifreniz:</div>
+                        <div class="kiraci-box">
+                            <input required type="password" class="kiraci-input" name="password">
+                        </div>
+
+                        <div style="transform: translateY(170%);">Yeni Şifreniz:</div>
+                        <div class="kiraci-box">
+                            <input required type="password" class="kiraci-input" name="passwordnew">
+                        </div>
+
+                        <br><br><br>
+                        <button id="kiraciyi-ekle-button" type="submit" style="display: inline;">Değiştir -></button>
+
+                    </div>
+
+
+                </form>
+
+
+            
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+

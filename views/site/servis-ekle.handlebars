@@ -1,0 +1,77 @@
+<div class="wrapper">
+    <div class="sidebar">
+        {{> sidebar}}
+    </div>
+    <div class="main_content">
+        <div class="header">
+            {{> header}}
+        </div>  
+        <div class="info">
+            <div class="baslik-text" >
+                <p style="font-size: x-large; font-weight: 500; margin: 20px 30px 15px 5%; display: inline-block" >Servis Ekle</p> 
+            </div>
+
+            <br><br><br>
+
+            <form style="display: none;" action="/bakim/servis-ekle" method="POST" id="servis-ekle" enctype="multipart/form-data">
+
+
+            </form>
+
+
+                <div class="servis-text" >
+                    <div style="transform: translateY(130%);" >Servis Adı:</div>
+                    <!-- Surround the select box within a "custom-select" DIV element.
+                    Remember to set the width: -->
+                    <div class="servis-box">
+                        <label for="servis-input"class="servis-input-label" >Girin</label>
+                        <input required type="text" form="servis-ekle" class="servis-input" name="name" onfocus="focusSearchServis(0)" onfocusout="notfocusSearchServis(0)" >
+                    </div>            
+                </div>
+                <br><br>
+
+                <div class="servis-text" >
+                    <div style="transform: translateY(130%);" >Açılış-Kapanış Saati:</div>
+                    <!-- Surround the select box within a "custom-select" DIV element.
+                    Remember to set the width: -->
+                    <div class="servis-box">
+                        <label for="servis-input"class="servis-input-label" >Girin</label>
+                        <input required type="text" form="servis-ekle" class="servis-input" name="saat" onfocus="focusSearchServis(1)" onfocusout="notfocusSearchServis(1)" >
+                    </div>            
+                </div>
+                <br><br>
+
+                <div class="servis-text" >
+                    <div style="transform: translateY(130%);" >Tel. No:</div>
+                    <!-- Surround the select box within a "custom-select" DIV element.
+                    Remember to set the width: -->
+                    <div class="servis-box">
+                        <label for="servis-input"class="servis-input-label" >Girin</label>
+                        <input required type="text" form="servis-ekle" class="servis-input" name="tel" onfocus="focusSearchServis(2)" onfocusout="notfocusSearchServis(2)" >
+                    </div>            
+                </div>
+
+
+                <div id="fileForm">
+                    <input id="files-input" form="servis-ekle" name="servis_image" type="file" onchange="filesChange(this)">
+                    <p id="files-text" >Lütfen servis fotoğrafı seçin ya da sürükleyin (İsteğe bağlı).</p>
+                    <img id="image" src="/images/icon_upload.png" style="margin-left: 32%;" alt="Emlak Örnek Görsel" width="200px" >
+
+
+                    <!--
+                        <button type="submit">Devam Et -></button>
+                    -->
+                </div>
+                <button type="submit" form="servis-ekle" style="display: inline; margin-left: 5%; transform: translateY(-50%);" id="servis-yukle-button">Gönder -></button>
+                <br><br><br><br><br><br>
+
+
+
+
+        </div>
+    </div>
+</div>
+
+<script src="/js/bakim-servis-ekle/search.js"></script>
+<script src="/js/bakim-servis-ekle/search-servis.js"></script>
+<script src="/js/bakim-servis-ekle/file-upload.js"></script>

@@ -1,0 +1,82 @@
+<div class="wrapper">
+    <div class="sidebar">
+        {{> sidebar}}
+    </div>
+    <div class="main_content">
+        <div class="header">
+            {{> header}}
+        </div>  
+        <div class="info">
+
+            <!-- BAŞLIK -->
+            <br>
+            <div class="baslik-text" >
+                <p style="font-size: 30px; margin-left:50px " >İşlemler</p> 
+            </div>
+
+            <div class="ust-container" >
+                <span style="display: none;" >
+                    <p>Son Üç Ay</p>                    
+                    <i class="fas fa-sort-down"></i>        
+                </span>
+                <span>
+                    <button class="btnSearchIcon"><i onclick="searchIslem()" class="fa fa-search"></i></button>
+                    <div class="islem-box">
+                        <label for="islem-input"  id="islem-input-label" >Ara</label>
+                        <input type="text" style="width: 7%;" id="islem-input" name="islem-input" onfocus="focusSearchIslem()" onfocusout="notFocusSearchIslem()" >
+                    </div>
+                </span>
+                <span style="display: none;" >
+                    <i class="fas fa-filter"></i>
+                    <p>Filtrele</p>
+                </span>
+                <span onclick="window.location = '/muhasebe/gelir-ekle'" >
+                    <p>+</p>
+                    <p>Gelir Ekle</p>
+                </span>
+                <span onclick="window.location = '/muhasebe/gider-ekle'">
+                    <p>-</p>
+                    <p>Gider Ekle</p>
+                </span>
+            </div>
+
+            <div class="islem-tablosu">
+                <div class="islem-tablosu-ust-baslik" >
+                    <span>
+                        <h2>Tüm Gelir</h2>
+                        <p>+ {{gelir}}₺</p>
+                    </span>
+                    <span>
+                        <h2>Tüm Gider</h2>
+                        <p>- {{gider}}₺</p>
+                    </span>                                
+                </div>
+
+                <div class="islem-tablosu-alt-baslik" >
+                    <span>TARİH</span>
+                    <span>EMLAK</span>
+                    <span>İŞLEM</span>
+                    <span>İLETİŞİM</span>
+                    <span>MİKTAR</span>
+                </div>
+                {{#each islem}}
+                <div class="islem-tablosu-satir">
+                    <span>{{tarih}}</span>
+                    <span>{{emlak}}</span>
+                    <span id="islem-name">{{islem_isim}}</span>
+                    <span>{{iletisim}}</span>
+                    <span> {{islemIsaret miktar tip}}₺</span>
+                </div>
+                {{/each}}
+
+            </div>
+
+            <!-- INFO BİTİŞ -->
+        </div>
+        <!-- MAIN CONTENT BİTİS -->
+    </div>
+    <!-- WRAPPER BİTİŞ -->
+</div>
+
+<script src="/js/muhasebe/search.js"></script>
+<script src="/js/muhasebe/search-islem.js"></script>    

@@ -1,0 +1,260 @@
+<div class="wrapper">
+    <div class="sidebar">
+        {{> sidebar}}
+    </div>
+    <div class="main_content">
+        <div class="header">
+            {{> header}}
+        </div>  
+        <div class="info">
+            <br>
+
+
+            <!-- Ev 1  -->
+            <div class="emlak-ornek" >
+
+                <div style="font-size: 24px; font-weight: 550;" >{{emlak.baslik}} Genel Özellikler</div>
+                <img id="image" src="{{emlak.kapak_image}}" alt="Emlak Örnek Görsel" width="200px" style="margin-right: 20px;" >
+
+                {{#if emlakDolu}}
+                
+                
+                <!-- KONUM BİLGİLERİ-->
+
+
+                    <span class="emlak-ornek-text" >
+
+                    <h2 style="text-decoration: underline;">Kiralama Durumu </h2>
+                    <ul>
+                        <li>
+                            <strong>Kiracı:</strong>
+                            <span>{{kiraci}}</span>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <strong>Giriş Tarihi:</strong>
+                            <span>{{giris_tarihi}}</span>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <strong>Çıkış Tarihi:</strong>
+                            <span>{{cikis_tarihi}}</span>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <strong>Kira Ücreti:</strong>
+                            <span>{{kira_ucreti}}</span>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <strong>Ödeme Günü:</strong>
+                            <span>{{odeme_gunu}}</span>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <strong>Bu Ayın Kirası:</strong>
+                            <span>{{kira_durum}}</span>
+                        </li>
+                    </ul>
+
+            
+                </span>
+
+
+                    
+                {{/if}}
+
+                <br><br>       
+
+                    <span class="emlak-ornek-text">
+
+
+                        <!-- TEMEL BİLGİLER -->
+                        <h2 style="text-decoration: underline;">Temel Bilgiler </h2>
+                        <ul>
+                            <li>
+                                <strong>Açıklama:</strong>
+                                <span>{{emlak.aciklama}}</span>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <strong>Alan:</strong>
+                                <span>{{emlak.alan}}</span>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <strong>Fiyat:</strong>
+                                <span>{{emlak.fiyat}} ₺</span>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <strong>Depozito:</strong>
+                                <span>{{emlak.depozito}} ₺</span>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <strong>Oda Sayısı:</strong>
+                                <span>{{emlak.oda_sayisi}}</span>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <strong>Banyo Sayısı:</strong>
+                                <span>{{emlak.banyo_sayisi}}</span>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <strong>Aidat:</strong>
+                                <span>{{emlak.aidat}} ₺</span>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <strong>Kat:</strong>
+                                <span>{{emlak.bul_kat}} / {{emlak.bina_kat}}</span>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <strong>Emlak Tipi:</strong>
+                                <span>{{emlak.emlak_tipi}}</span>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <strong>Isıtma Tipi:</strong>
+                                <span>{{emlak.isitma_tipi}}</span>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <strong>Yapım Yılı:</strong>
+                                <span>{{emlak.yapim_yili}}</span>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <strong>Bahçe Durumu:</strong>
+                                <span>{{emlak.bahce_durumu}}</span>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <strong>Güncel Durum:</strong>
+                                <span>{{emlak.durum}}</span>
+                            </li>
+                        </ul>
+                    </span>
+
+                
+
+                <!-- KONUM BİLGİLERİ-->
+
+
+                    <span class="emlak-ornek-text" >
+
+                    <h2 style="text-decoration: underline;">Konum Bilgileri </h2>
+                    <ul>
+                        <li>
+                            <strong>Ülke:</strong>
+                            <span>{{emlak.ulke}}</span>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <strong>Şehir:</strong>
+                            <span>{{emlak.sehir}}</span>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <strong>İlçe:</strong>
+                            <span>{{emlak.ilce}}</span>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <strong>Mahalle:</strong>
+                            <span>{{emlak.mahalle}}</span>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <strong>Cadde:</strong>
+                            <span>{{emlak.cadde}}</span>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <strong>Sokak:</strong>
+                            <span>{{emlak.sokak}}</span>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <strong>Apartman No:</strong>
+                            <span>{{emlak.apart_no}} ₺</span>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <strong>Daire No:</strong>
+                            <span>{{emlak.daire_no}}</span>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <strong>Posta Kodu:</strong>
+                            <span>{{emlak.posta_kodu}}</span>
+                        </li>
+                    </ul>
+          
+                </span>
+
+
+
+
+                <!-- EK ÖZELLİKLER-->
+
+                    <span class="emlak-ornek-text" >
+                        <h2 style="text-decoration: underline;">Ek Özellikler </h2>
+                        {{#each ozellikler}}
+                        <ul>
+                            <li>
+                                <strong>➤ {{name}}</strong>
+                            </li>
+                        </ul>
+                        {{/each}}
+                    </span>   
+
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<script src="/js/emlaklar-kiraciyi-ekle/search.js"></script>
+<script src="/js/emlaklar-kiraciyi-ekle/search-kiraci.js"></script>
+<script src="/js/emlaklar-kiraciyi-ekle/select-operation.js"></script>
+
+<script>
+
+    var myEditableElement = document.getElementById('myContent');
+    myEditableElement.addEventListener('input', function() {
+        console.log('An edit input has been detected');
+        console.log(myEditableElement.innerHTML);
+    });
+
+</script>

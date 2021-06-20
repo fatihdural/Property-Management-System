@@ -1,0 +1,809 @@
+<div class="wrapper">
+    <div class="sidebar">
+        {{> sidebar}}
+    </div>
+    <div class="main_content">
+        <div class="header">
+            {{> header}}
+        </div>  
+        <div class="info">
+            <div class="baslik-text" >
+                <h2 style="font-size: 33px; margin: 20px 30px 15px 5%; display: inline-block" >Ek Özellikler</h2> 
+            </div>
+
+            <div class="progressbar-container">
+              <ul class="progressbar">
+                  <li >Temel</li>
+                  <li>Konum</li>
+                  <li>Belgeler</li>
+                  <li class="active">Ek Özellikler</li>
+              </ul>
+            </div>
+            <br><br><br><br><br>
+
+            <form action="/emlaklar/emlak-ekle-4" method="POST">
+                <span class="ozellikler-tablo" >
+                    <h2 style="padding: 10px 0px 15px 5px" >İç Özellikler</h2>
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="adsl" id="accept-terms"> 
+                            <span style="margin-left: 5px;">ADSL</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="akilli" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Akıllı Ev</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="alarm_hirsiz" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Alarm(Hırsız)</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="alarm_yangin" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Alarm(Yangın)</span>
+                        </span>
+                    </span>
+
+                    <!-- -->
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="alaturka" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Alaturka Tuvalet</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="ankastre" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Ankastre Fırın</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="asansor" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Asansör</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="beyaz_esya" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Beyaz Eşya</span>
+                        </span>
+                    </span>
+
+                    <!-- -->
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="ebeveyn_banyosu" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Ebeveyn Banyosu</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="fiber_net" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Fiber İnternet</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="isi_cam" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Isıcam</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="klima" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Klima</span>
+                        </span>
+                    </span>
+
+
+
+                    <!-- -->
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="giyinme_odasi" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Giyinme Odası</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="jakuzi" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Jakuzi</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="kiler" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Kiler</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="kuvet" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Küvet</span>
+                        </span>
+                    </span>
+
+
+                    <!-- -->
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="laminant_zemin" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Laminant Zemin</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="mobilya" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Mobilya</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="mutfak" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Mutfak(Ankastre)</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="panjur" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Panjur</span>
+                        </span>
+                    </span>
+
+                    <!-- -->
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="set_ustu_ocak" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Set Üstü Ocak</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="teras" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Teras</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="wi_fi" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Wi-Fi</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="yuz_tanima" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Yüz Tanıma</span>
+                        </span>
+                    </span>
+
+
+
+                    <!-- -->
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="kurutma_makinesi" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Kurutma Makinesi</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="celik_kapi" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Çelik Kapı</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="sofben" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Şofben</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="somine" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Şömine</span>
+                        </span>
+                    </span>
+                    
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox"  value="sofben" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Şofben</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" value="somine" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Şömine</span>
+                        </span>
+                    </span>
+                </span>
+                <br><br>
+
+                <span class="ozellikler-tablo" >
+                    <h2 style="padding: 10px 0px 15px 5px" >Dış Özellikler</h2>
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="asansor" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Asansör</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="buhar_odasi" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Buhar Odası</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="guvenlik" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Güvenlik</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="hamam" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Hamam</span>
+                        </span>
+                    </span>
+
+                    <!-- -->
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="isi_yalitim" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Isı Yalıtım</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="jenerator" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Jeneratör</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="kablo_tv" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Kablo Tv</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="kamera_sistemi" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Kamera Sistemi</span>
+                        </span>
+                    </span>
+
+                    <!-- -->
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="kapali_garaj" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Kapalı Garaj</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="kapici" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Kapıcı</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="kres" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Kreş</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="mustakil_havuz" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Müstakil Havuz</span>
+                        </span>
+                    </span>
+
+
+
+                    <!-- -->
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="otopark" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Otopark</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="oyun_parki" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Oyun Parkı</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="sauna" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Sauna</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="ses_yalitimi" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Ses Yalıtımı</span>
+                        </span>
+                    </span>
+
+
+                    <!-- -->
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="spor_alani" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Spor Alanı</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="su_deposu" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Su Deposu</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="tenis_kortu" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Tenis Kortu</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="uydu" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Uydu</span>
+                        </span>
+                    </span>
+
+                    <!-- -->
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="yangin_merdiveni" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Yangın Merdiveni</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="havuz_acik" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Havuz(Açık)</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="havuz_kapali" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Havuz(Kapalı)</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="yuz_tanima" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Yüz Tanıma</span>
+                        </span>
+                    </span>
+                    <!-- -->
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="kurutma_makinesi" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Kurutma Makinesi</span>
+                        </span>
+                    </span>
+                </span>
+                <br><br>
+
+                <span class="ozellikler-tablo" >
+                    <h2 style="padding: 10px 0px 15px 5px" >Muhit</h2>
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="alisveris_merkezi" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Alışveriş Merkezi</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="belediye" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Belediye</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="cami" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Cami</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="cemevi" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Cemevi</span>
+                        </span>
+                    </span>
+
+                    <!-- -->
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="denize_sifir" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Denize Sıfır</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="eczane" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Eczane</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="egitim_merkezi" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Eğlence Merkezi</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="fuar" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Fuar</span>
+                        </span>
+                    </span>
+
+                    <!-- -->
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="hastane" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Hastane</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="havra" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Havra</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="kilise" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Kilise</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="lise" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Lise</span>
+                        </span>
+                    </span>
+
+
+
+                    <!-- -->
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="market" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Market</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="park" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Park</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="polis_merkezi" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Polis Merkezi</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="saglik_ocagi" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Sağlık Ocağı</span>
+                        </span>
+                    </span>
+
+
+                    <!-- -->
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="semt_pazari" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Semt Pazarı</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="spor_salonu" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Spor Salonu</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="universite" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Üniversite</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="ilk_orta_okul" id="accept-terms"> 
+                            <span style="margin-left: 5px;">İlkokul-Ortaokul</span>
+                        </span>
+                    </span>
+
+                    <!-- -->
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="itfaiye" id="accept-terms"> 
+                            <span style="margin-left: 5px;">İtfaiye</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="sehir_merkezi" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Şehir Merkezi</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="wi_fi" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Wi-Fi</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" value="yuz_tanima" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Yüz Tanıma</span>
+                        </span>
+                    </span>
+
+
+
+                    <!-- -->
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="kurutma_makinesi" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Kurutma Makinesi</span>
+                        </span>
+                    </span>  
+                </span>
+                <br><br>
+
+                <span class="ozellikler-tablo" >
+                    <h2 style="padding: 10px 0px 15px 5px" >Ulaşım</h2>
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="anayol" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Anayol</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="avrasya_tuneli" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Avrasya Tüneli</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="bogaz_kopruleri" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Boğaz Köprüleri</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="cadde" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Cadde</span>
+                        </span>
+                    </span>
+
+                    <!-- -->
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="deniz_otobusu" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Deniz Otobüsü</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="dolmus" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Dolmuş</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="e_5" id="accept-terms"> 
+                            <span style="margin-left: 5px;">E-5</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="havalimani" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Havalimanı</span>
+                        </span>
+                    </span>
+
+                    <!-- -->
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="marmaray" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Marmaray</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="metro" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Metro</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="metrobus" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Metrobüs</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="minibus" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Minibüs</span>
+                        </span>
+                    </span>
+
+
+
+                    <!-- -->
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="otobus_duragi" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Otobüs Durağı</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="sahil" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Sahil</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="tem" id="accept-terms"> 
+                            <span style="margin-left: 5px;">TEM</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="teleferik" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Teleferik</span>
+                        </span>
+                    </span>
+
+
+                    <!-- -->
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="tramvay" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Tramvay</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="tren_station" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Tren İstasyonu</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="trolebus" id="accept-terms"> 
+                            <span style="margin-left: 5px;">Troleybüs</span>
+                        </span>
+                    </span>
+
+                    <span class="ozellik" >
+                        <span class="checkbox">
+                            <input type="checkbox" name="ozellik" value="iskele" id="accept-terms"> 
+                            <span style="margin-left: 5px;">İskele</span>
+                        </span>
+                    </span>
+                </span>
+                <button type="submit" style="display: inline; margin-left: 5%; transform: translateY(-50%);" id="emlak-yukle-button">Yükle -></button>
+        
+            </form>
+
+
+            <br><br><br><br><br>
+            
+
+        </div>
+
+    </div>
+</div>
+

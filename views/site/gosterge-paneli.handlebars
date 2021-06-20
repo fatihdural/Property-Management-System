@@ -1,0 +1,209 @@
+<!-- BODY START  -->
+
+
+<div class="wrapper">
+    <div class="sidebar">
+      {{> sidebar}}
+    </div>
+    
+    <div class="main_content">
+        <div class="header">
+          {{> header}}
+        </div>  
+        
+        <div class="info">
+          <h2 style="margin-left: 50px; margin-top: 50px; margin-bottom: 50px; " >Gösterge Paneli</h2> 
+
+          <!-- GOOGLE CHART FOR KAR ZARAR START -->
+          <div class="row" style="margin-top: 20px; margin-left: 50px;" >
+            <div class="col-md-6">
+              <div id="chart_div1" class="chart"></div>
+            </div>
+            <!--
+            <div class="col-md-6">
+              <div id="chart_div2" class="chart"></div>
+            </div>
+            -->
+          </div>
+          <!-- GOOGLE CHART FOR KAR ZARAR END -->
+          <br>
+
+          <!-- 3 CHART BİRLEŞİMİ START -->
+          <div class="net-gelir-masraf-charts">
+            <!-- NET KAZANÇ CHART START -->
+            <div style="margin-left: 50px; width: 330px; background-color: white; border-radius: 5px; padding: 20px 30px 0px 20px; display: inline-block; " >
+              <h3>Net Kazanç</h3>
+              <br>
+              <h1 style="font-size: 48px;" >{{formatNumber net_kazanc}} ₺</h1>
+              <br>
+              <span style="color: #FF4141;" >
+                <i class="fas fa-long-arrow-alt-down"></i>
+                <span>13.8%</span>
+              </span>
+              <div style="margin-left: 120px; float: right; transform: translateY(-100%); margin-bottom: -20px;" >
+                <i style="font-size: 64px; color: #FF4141;" class="fas fa-database"></i>
+              </div>
+            </div>
+          <!-- NET KAZANÇ CHART END -->
+
+          <!-- TÜM GELİR CHART START -->
+            <div style=" margin-left: 55px; width: 330px; background-color: white; border-radius: 5px; padding: 20px 30px 0px 20px; display: inline-block; " >
+              <h3>Tüm Gelir</h3>
+              <br>
+              <h1 style="font-size: 48px;" >{{formatNumber tum_gelir}} ₺</h1>
+              <br>
+              <span style="color: #55D8FE;" >
+                <i class="fas fa-long-arrow-alt-up"></i>
+                <span>2.8%</span>
+              </span>
+              <div style="margin-left: 120px; float: right; transform: translateY(-100%); margin-bottom: -20px;" >
+                <i style="font-size: 64px; color: #55D8FE;" class="fas fa-database"></i>
+              </div>
+            </div>
+          <!-- TÜM GELİR CHART END -->
+
+          <!-- TÜM MASRAF CHART START -->
+            <div style=" margin-left: 55px; width: 330px; background-color: white; border-radius: 5px; padding: 20px 30px 0px 20px; display: inline-block; " >
+              <h3>Tüm Masraf</h3>
+              <br>
+              <h1 style="font-size: 48px;" >{{formatNumber tum_masraf}} ₺</h1>
+              <br>
+              <span style="color: #FF4141;" >
+                <i class="fas fa-long-arrow-alt-down"></i>
+                <span>13.8%</span>
+              </span>
+              <div style="margin-left: 120px; float: right; transform: translateY(-100%); margin-bottom: -20px;" >
+                <i style="font-size: 64px; color: #FF4141;" class="fas fa-database"></i>
+              </div>
+            </div>
+          <!-- TÜM MASRAF CHART END -->
+          </div>
+          <!-- 3 CHART BİRLEŞİMİ END -->
+
+          <!-- PIE CHART START -->
+          <main style="margin-left: 50px; display: inline-block; transform: translate(0, -45%); " >
+            <h2 style="color: white;" >SÜRESİ DOLAN KİRALAMALAR</h2>
+            <section>
+              <div class="pieID pie">
+                <!-- FOR PIE CHART JS -->
+              </div>
+              <ul class="pieID legend">
+                <li>
+                  <em> &#60; 30 gün</em>
+                  {{#if gosterGrafik}}
+                  <span>{{ilk}}</span>
+                  {{/if}}
+                </li>
+                <li>
+                  <em>31 - 60 gün</em>
+                  {{#if gosterGrafik}}
+                  <span>{{ikinci}}</span>
+                  {{/if}}
+                </li>
+                    
+                <li>
+                  <em>61-90 gün</em>
+                  {{#if gosterGrafik}}
+                  <span>{{ucuncu}}</span>
+                  {{/if}}
+                </li>
+                    
+                <li>
+                  <em>90 &#62; </em>
+                  {{#if gosterGrafik}}
+                  <span>{{dorduncu}}</span>
+                  {{/if}}
+                </li>
+                <!--
+                <li>
+                  <em>Aliens</em>
+                  <span>11</span>
+                </li>
+                -->
+              </ul>
+            </section>
+          </main>
+          <!-- PIE CHART END -->
+
+          <!-- EMLAK ADET CHAR START -->
+          <div style="transform: translate(0, -10%); background-color: white; margin-left: 0px; display: inline-block; padding: 20px 20px 0px 20px; border-radius: 4px;" class="emlak-adet-chart" >
+
+            <div>
+              <span>
+                <i style="font-size: 24px; transform: translateY(10%); color: #A3A0FB;" class="fas fa-home"></i>
+              </span>  
+  
+              <span style="margin-left: 20px; width: 10px; height: 50px; overflow: hidden;">
+                <span style="font-size: 32px; font-weight: bold; " >{{emlak_durum.toplam}}</span>      
+              </span>
+
+              <span>
+                <a style="margin-left: 70px; text-decoration: none; color: #1D13FF;" href="/emlaklar"> Hepsini Gör </a>
+              </span>  
+
+            </div>
+
+            <div style="transform: translateY(-20px); margin-left: 49px; ">
+              <span>Emlak</span>
+            </div>
+
+            <div style=" display: inline-block; border-radius: 3px; background-color: #ECE6E6; padding: 30px 30px 0px 30px; margin-left: 20px;" >
+              <div style="font-size: 32px; font-weight: bold; margin-left: 10px; "  >
+                <p>{{emlak_durum.bos}}</p>
+                <p style="margin-left: 30px;" >|</p>
+                <p style="margin-left: 30px;" >{{emlak_durum.dolu}}</p>
+              </div>
+
+              <div style="margin-left:5px; transform: translateY(-50%); ">
+                <p>Boş</p>
+                <p style="margin-left: 75px;" >Dolu</p>
+              </div>
+            </div>
+
+          </div>
+          <!-- EMLAK ADET CHAR END -->
+
+          <!-- KİRA GELİRLERİ CHART START -->
+            <div style="transform: translate(8%, 4%); background-color: white; border-radius: 5px; padding: 20px 20px 0px 20px; display: inline-block; " >
+              <h2>Kira Gelirleri</h2>
+              <br>
+              <div style="border: 2px solid blue; width: 300px; padding: 10px 10px 0px 10px;">
+                <div style="font-size: 24px; color: #56D9FE;" >₺ {{kira_gelirleri.gelenler}}</div>
+                <div style="margin-top: -10px;  " >Tüm Gelenler</div>
+              </div>
+
+              <div style="border: 2px solid blue; width: 300px; padding: 10px 10px 0px 10px;">
+                <div style="font-size: 24px; color: #F50000;" >₺ {{kira_gelirleri.beklenenler}}</div>
+                <div style="margin-top: -10px;  " >Beklenenler</div>
+              </div>
+            </div>
+          <!-- KİRA GELİRLERİ CHART END -->
+          <br><br><br><br><br>
+        </div>
+    </div>
+</div>
+
+
+<!-- Search Js -->
+<script src="/js/gosterge-paneli/search.js"></script>
+
+<!-- PIE CHART JS -->
+<script src="/js/gosterge-paneli/pie-chart.js" ></script> 
+
+<!-- GOOGLE CHART KAR-ZARAR JS  -->
+<script src="/js/gosterge-paneli/google-chart-kar-zarar.js" ></script>
+
+<script>
+  var decodedJsonGelir = decodeURIComponent("{{encodedJsonGelir}}");
+  var jsonObjGelir = JSON.parse(decodedJsonGelir);
+
+  var decodedJsonGider = decodeURIComponent("{{encodedJsonGider}}");
+  var jsonObjGider = JSON.parse(decodedJsonGider);
+
+  karZararGrafik(jsonObjGelir, jsonObjGider);
+
+</script>
+
+
+
+<!-- BODY END  -->

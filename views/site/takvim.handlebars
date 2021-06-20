@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet"> 
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/{{style}}">
+
+        <link rel="stylesheet" type="text/css" href="/takvim/css/evo-calendar.css"/>
+        <link rel="stylesheet" type="text/css" href="/takvim/css/evo-calendar.midnight-blue.css"/>
+
+	<title>Emlak Yönetim Platformu</title>
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="sidebar">
+        {{> sidebar}}
+    </div>
+    <div class="main_content">
+        <div class="header">
+            {{> header}}
+        </div>  
+        <div class="info">
+
+            <!-- BAŞLIK -->
+        <br>
+
+            <div class="baslik-text" >
+                <p style="font-size: 30px; margin-left: 50px; display: inline-block" >Takvim</p> 
+            </div>
+
+
+            <div id="calendar" style="margin-left: 50px;" ></div>
+
+            <!-- ETKİNLİK EKLE -->
+            <form action="/takvim/ekle" method="POST" id="form-ekle" enctype="multipart/form-data" style="display: none;"></form>
+            <form action="/takvim/sil" method="POST" id="form-sil" enctype="multipart/form-data" style="display: none;"></form>
+
+            <div class="etkinlik-ekle" style="margin-left: 50px;" >
+                <h2>Etkinlik Ekle</h2>
+                <div>
+                    <label>Etkinlik Tarihi: </label>
+                    <input required type="date" form="form-ekle" name="tarih">
+                </div>
+                
+                <div >
+                    <label>Başlık: </label>
+                    <input required type="text" name="baslik" form="form-ekle" >       
+                </div>
+                <button type="submit" form="form-ekle" id="etkinlik-ekle-button" >Ekle -></button>
+
+            </div>
+
+            <div class="etkinlik-sil" style="margin-left: 50px;" >
+                <h2>Etkinlik Sil</h2>
+                <div>
+                    <label>Etkinlik Tarihi: </label>
+                    <input required type="date" form="form-sil" name="tarih">
+                </div>
+                
+                <div >
+                    <label>Başlık: </label>
+                    <input required type="text" name="baslik" form="form-sil" >       
+                </div>
+                <button type="submit" form="form-sil" id="etkinlik-sil-button" >Sil -></button>
+
+            </div>    
+
+
+            <!-- INFO BİTİŞ -->
+
+        </div>
+        <!-- MAIN CONTENT BİTİS -->
+    </div>
+    <!-- WRAPPER BİTİŞ -->
+</div>
+
+<script src="/js/takvim/search.js"></script>
+
+
+<!-- Some Initial Scripts -->
+<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="/takvim/js/evo-calendar.js"></script>
+
+<script>
+
+ // initialize your calendar, once the page's DOM is ready
+ $(document).ready(function() {
+
+    $('#calendar').evoCalendar({
+        language: 'tr',
+        theme: 'Midnight Blue'
+    })
+
+    // veritabanından günleri al
+    var decodedJson = decodeURIComponent("{{{encodedJson}}}");
+    var jsonObj = JSON.parse(decodedJson);
+    for(var i = 0; i < jsonObj.length; i++){
+        var herEtkinlik = jsonObj[i]
+        var tarih = herEtkinlik.tarih
+        var baslik = herEtkinlik.baslik
+        var id = herEtkinlik._id
+
+        const [yil, ay, gun] = tarih.split("-")
+
+        $("#calendar").evoCalendar('addCalendarEvent', [
+            {
+            id: id,
+            name: baslik,
+            date: ay+"/"+gun+"/"+yil,
+            type: "event",
+            color: "#63d867"
+            }
+        ]);
+
+    }
+
+})
+
+
+
+
+</script>
+
+        
+
+</body>
+</html>
+
+

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Şifremi Unuttum</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet"> </head>
+
+    <link rel="stylesheet" href="/css/{{style}}">
+</head>
+<body>
+    <img id="image" src="/images/giris_ekrani_goruntu.png"  alt="Giriş Sol Görsel">
+    <div class="yazi-class" >
+        <h1 >EMLAK YÖNETİM PLATFORMU</h1>         
+        <h3>Şifre yenilenmesi için link gönderilecek mail adresini gir.</h2><br><br><br>
+
+        <form id="login-box" action="/login/sifremi-unuttum" method="POST">
+            <div class="user-box">
+              <input type="text" name="" required="" id="mail-input">
+              <label>E-mail adresin</label>
+            </div>
+        </form>
+        <br>
+        <button id="send-link-button" style="display: inline;" type="submit" form="login-box" >Link gönder</button>
+
+    </div> 
+    
+</body>
+</html>

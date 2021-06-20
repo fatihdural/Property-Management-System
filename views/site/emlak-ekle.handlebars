@@ -1,0 +1,200 @@
+<div class="wrapper">
+    <div class="sidebar">
+        {{> sidebar}}
+    </div>
+    <div class="main_content">
+        <div class="header">
+            {{> header}}
+        </div>  
+        <div class="info">
+            <div class="baslik-text" >
+                <p style="font-size: x-large; font-weight: 500; margin: 10px 10px 10px 5%;" >Emlak Ekle</p> 
+            </div>
+
+            <br>
+            <div class="progressbar-container">
+                <ul class="progressbar">
+                    <li class="active">Temel</li>
+                    <li>Konum</li>
+                    <li>Belgeler</li>
+                    <li>Ek Özellikler</li>
+                </ul>
+            </div>
+            <br><br><br>
+
+            <div id="emlak-kapak" >
+                <label for="files">Emlak Kapak Fotoğrafı: </label>
+                <input class="files" name="kapak_image" form="emlak-ekle-form" type="file"/>
+                <output class="result"></output>
+            </div>
+            <div id="emlak-gorsel">
+                <label for="files">Emlak Görselleri: </label>
+                <input class="files" name="gorsel_image" form="emlak-ekle-form" type="file"/>
+                <output class="result"></output>
+            </div>
+            <br><br><br><br><br>
+
+            <!-- Ev 1  -->
+            <div class="emlak-ornek" >
+                <div class="emlak-ornek-text" >
+
+                    <form id="emlak-ekle-form" action="/emlaklar/emlak-ekle" method="POST" enctype="multipart/form-data">
+                              
+                        <div style="transform: translateY(130%);">Tür:</div>
+
+                        <div class="custom-select"style="width:250px;">
+                            <select required  name="emlak_turu">
+                            <option value="0">Seçin</option>
+                            <option value="kiralık">Kiralık</option>
+                            <option value="satilik">Satılık</option>
+                            </select>
+                        </div>
+
+                        <div style="transform: translateY(130%);">Emlak Başlık:</div>
+                        <!-- Surround the select box within a "custom-select" DIV element.
+                        Remember to set the width: -->
+                        
+                        <div class="emlak-box">
+                            <label for="emlak-input"  class="emlak-input-label" >Girin</label>
+                            <input required type="text" class="emlak-input" name="baslik" onfocus="focusSearchEmlak(0)" onfocusout="notfocusSearchEmlak(0)" >
+                        </div>
+
+                        <div style="transform: translateY(130%);">Emlak Açıklama:</div>
+                        <!-- Surround the select box within a "custom-select" DIV element.
+                        Remember to set the width: -->
+                        <div class="emlak-box">
+                            <label for="emlak-input"  class="emlak-input-label" >Girin</label>
+                            <input required type="text" class="emlak-input" name="aciklama" onfocus="focusSearchEmlak(1)" onfocusout="notfocusSearchEmlak(1)" >
+                        </div>
+
+                        <div style="transform: translateY(130%);">Alan(mt2):</div>
+                        <!-- Surround the select box within a "custom-select" DIV element.
+                        Remember to set the width: -->
+                        <div class="emlak-box">
+                            <label for="emlak-input"  class="emlak-input-label" >Girin</label>
+                            <input required type="text" class="emlak-input" name="alan" onfocus="focusSearchEmlak(2)" onfocusout="notfocusSearchEmlak(2)" >
+                        </div>
+
+                        <div style="transform: translateY(130%);">Fiyat:</div>
+                        <!-- Surround the select box within a "custom-select" DIV element.
+                        Remember to set the width: -->
+                        <div class="emlak-box">
+                            <label for="emlak-input"  class="emlak-input-label" >..tl</label>
+                            <input required type="text" class="emlak-input" name="fiyat" onfocus="focusSearchEmlak(3)" onfocusout="notfocusSearchEmlak(3)" >
+                        </div>
+
+                        <div style="transform: translateY(130%);">Depozito:</div>
+                        <!-- Surround the select box within a "custom-select" DIV element.
+                        Remember to set the width: -->
+                        <div class="emlak-box">
+                            <label for="emlak-input"  class="emlak-input-label" >..tl</label>
+                            <input required type="text" class="emlak-input" name="depozito" onfocus="focusSearchEmlak(4)" onfocusout="notfocusSearchEmlak(4)" >
+                        </div>
+
+                        <div style="transform: translateY(130%);">Oda Sayısı:</div>
+                        <!-- Surround the select box within a "custom-select" DIV element.
+                        Remember to set the width: -->
+                        <div class="emlak-box">
+                            <label for="emlak-input"  class="emlak-input-label" >3+0 gibi</label>
+                            <input required type="text" class="emlak-input" name="oda_sayisi" onfocus="focusSearchEmlak(5)" onfocusout="notfocusSearchEmlak(5)" >
+                        </div>
+
+                        <div style="transform: translateY(130%);">Banyo Sayısı:</div>
+                        <!-- Surround the select box within a "custom-select" DIV element.
+                        Remember to set the width: -->
+                        <div class="emlak-box">
+                            <label for="emlak-input"  class="emlak-input-label" >2 gibi</label>
+                            <input required type="text" class="emlak-input" name="banyo_sayisi" onfocus="focusSearchEmlak(6)" onfocusout="notfocusSearchEmlak(6)" >
+                        </div>
+
+                        <div style="transform: translateY(130%);">Aidat:</div>
+                        <!-- Surround the select box within a "custom-select" DIV element.
+                        Remember to set the width: -->
+                        <div class="emlak-box">
+                            <label for="emlak-input"  class="emlak-input-label" >..tl</label>
+                            <input required type="text" class="emlak-input" name="aidat" onfocus="focusSearchEmlak(7)" onfocusout="notfocusSearchEmlak(7)" >
+                        </div>
+
+                        <div style="transform: translateY(130%);">Bulunduğu Kat:</div>
+                        <!-- Surround the select box within a "custom-select" DIV element.
+                        Remember to set the width: -->
+                        <div class="emlak-box">
+                            <label for="emlak-input"  class="emlak-input-label" >Girin</label>
+                            <input required type="text" class="emlak-input" name="bul_kat" onfocus="focusSearchEmlak(8)" onfocusout="notfocusSearchEmlak(8)" >
+                        </div>
+
+
+                        <div style="transform: translateY(130%);">Bina Kat Sayısı:</div>
+                        <!-- Surround the select box within a "custom-select" DIV element.
+                        Remember to set the width: -->
+                        <div class="emlak-box">
+                            <label for="emlak-input"  class="emlak-input-label" >Girin</label>
+                            <input required type="text" class="emlak-input" name="bina_kat" onfocus="focusSearchEmlak(9)" onfocusout="notfocusSearchEmlak(9)" >
+                        </div>
+
+                        <div style="transform: translateY(130%);">Emlak Tipi:</div>
+                        <!-- Surround the select box within a "custom-select" DIV element.
+                        Remember to set the width: -->
+                        <div class="custom-select"style="width:250px;">
+                            <select required name="emlak_tipi">
+                            <option value="0">Seçin</option>
+                            <option value="konut">Konut</option>
+                            <option value="isyeri">İşyeri</option>
+                            <option value="arsa">Arsa</option>
+                            <option value="bina">Bina</option>
+                            <option value="devre_mulk">Devre Mülk</option>
+                            <option value="turistik_tesis">Turistik Tesis</option>
+                            </select>
+                        </div>
+
+                        <div style="transform: translateY(130%);">Isıtma Tipi:</div>
+                        <!-- Surround the select box within a "custom-select" DIV element.
+                    Remember to set the width: -->
+                    <div class="custom-select"style="width:250px;">
+                        <select required name="isitma_tipi">
+                        <option value="0">Seçin</option>
+                        <option value="dogalgaz">Doğalgaz</option>
+                        <option value="odun">Odunlu-Kömürlü</option>
+                        <option value="elektrik">Elektrikli</option>
+                        <option value="gunes">Güneş</option>
+                        <option value="yerden">Yerden Isıtma</option>
+                        </select>
+                    </div>
+
+
+                    <div style="transform: translateY(180%);">Bina Yapım Yılı:</div>
+                    <!-- Surround the select box within a "custom-select" DIV element.
+                    Remember to set the width: -->
+                    <div class="emlak-box">
+                        <label for="emlak-input"  class="emlak-input-label" >2010</label>
+                        <input required type="text" class="emlak-input" name="yapim_yili" onfocus="focusSearchEmlak(10)" onfocusout="notfocusSearchEmlak(10)" >
+                    </div>
+
+                        <div style="transform: translateY(130%);">Bahçe Durumu:</div>
+                        <!-- Surround the select box within a "custom-select" DIV element.
+                        Remember to set the width: -->
+                        <div class="emlak-box">
+                            <label for="emlak-input"  class="emlak-input-label" >Var/Yok</label>
+                            <input required type="text" class="emlak-input" name="bahce_durumu" onfocus="focusSearchEmlak(11)" onfocusout="notfocusSearchEmlak(11)" >
+                        </div>
+
+                    </div>
+                    
+                    <button style="display: inline;" type="submit" id="emlak-devam-button">  Devam et -></button>
+
+
+                    </form>
+         
+             </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<script src="/js/emlak-ekle/search.js"></script>
+<script src="/js/emlak-ekle/search-emlak.js"></script>
+<script src="/js/emlak-ekle/select-options.js"></script>
+<script src="/js/emlak-ekle/upload-images.js"></script>

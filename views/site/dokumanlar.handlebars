@@ -1,0 +1,112 @@
+<div class="wrapper">
+    <div class="sidebar">
+        {{> sidebar}}
+    </div>
+
+    <div class="main_content">
+        <div class="header">
+            {{> header}}
+        </div>  
+
+        <div class="info" >
+
+            <!-- BAŞLIK -->
+
+            <br>
+            <div class="baslik-text" >
+                <p style="font-size: 32px; margin-left:50px; display: inline-block;  " >Dokümanlar</p> 
+            </div>
+
+            <br><br>
+            <div class="ust-container" style="margin-left: 220px;" >
+                <span>
+                    <button class="btnSearchIcon"><i onclick="searchBelge()" class="fa fa-search"></i></button>
+                    <div class="belge-box">
+                        <label for="belge-input"  id="belge-input-label" >Ara</label>
+                        <input type="text" id="belge-input" name="belge-input" onfocus="focusSearchBelge()" onfocusout="notFocusSearchBelge()" >
+                    </div>
+                </span>
+                <span onclick="window.location = '/dokumanlar/belge-ekle'" >
+                    <p>+</p>
+                    <p>Doküman Ekle</p>
+                </span>
+                <span onclick="dokumanSil()" >
+                    <p>-</p>
+                    <p>Doküman Sil</p>
+                </span>
+            </div>
+
+
+            <div class="belge-tablosu" style="margin-left: 150px;">
+
+                <div class="belge-tablosu-baslik" >
+                    <span>TARİH</span>
+                    <span>BELGE NUMARASI</span>
+                    <span id="belge-name">BELGE ADI</span>
+                </div>
+
+                {{#each belge}}    
+                <div class="belge-tablosu-satir" onclick="satirSil('{{_id}}')">
+                    <span>{{generateDate tarih 'MMM DD YYYY'}}</span>
+                    <span>{{numara}}</span>
+                    <span id="belge-name">{{name}}</span>
+                        <a style="display: inline-block;" href="{{belge}}" target="_blank" title="belge">
+                            <span id="open-file" >Belgeyi Aç</span> 
+                        </a>                  
+                </div>
+                {{/each}}
+
+            </div>
+            <!-- INFO BİTİŞ -->
+        </div>
+        <!-- MAIN CONTENT BİTİS -->
+    </div>
+    <!-- WRAPPER BİTİŞ -->
+</div>
+
+<script src="/js/dokumanlar/search.js"></script>
+<script src="/js/dokumanlar/search-belge.js"></script>
+
+<script>
+    $(".belge-tablosu-satir").css("cursor","default");
+
+    var flag = true
+    function dokumanSil(){
+        $(".belge-tablosu-satir").css("background","#efeff0");
+        $(".belge-tablosu-satir").css("cursor","pointer");
+        flag = false
+
+    }
+    function satirSil(satir_id){
+        var satir =  document.getElementsByClassName('belge-tablosu-satir').item(0)
+        console.log(satir.style)
+
+        if( flag ){
+            //document.getElementById('open-file').click(); // Works!
+            console.log('CLİCK')
+            return
+        }
+        
+        console.log('SİLCEN Mİ')
+        if (confirm('Bu belgeyi silmek istediğine emin misin?')) {
+            // Save it!
+            //$('#kisi-sil-form').submit();
+
+            var url = '/dokumanlar/sil/'+satir_id
+
+            console.log(url)
+
+            window.location = url
+            
+
+            console.log('siliniyo');
+            flag = true
+        } else {
+        // Do nothing!
+            console.log('Thing was not saved to the database.');
+
+            window.location = '/dokumanlar'
+
+        }
+    }
+</script>

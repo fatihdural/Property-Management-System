@@ -1,0 +1,72 @@
+<div class="wrapper">
+    <div class="sidebar">
+        {{> sidebar}}
+    </div>
+
+    <div class="main_content">
+        <div class="header">
+            {{> header}}
+        </div>  
+        <div class="info">
+            <br>
+            <div>
+                <p style="margin-left:50px;font-size:30px; " >Servisler</p> 
+                <p style="margin-left: 58%;" >{{adet}} Toplam | </p>
+
+                <button class="btnSearchIcon"><i onclick="searchServis()" class="fa fa-search"></i></button>
+
+                <div class="search-box"  >
+                    <label for="servis-search-input"  id="servis-search-input-label-info" style="transform: translate(0%, -10%);" >Servis Ara</label>
+                    <input type="text" id="servis-search-input" name="servis-search-input" onfocus="focusSearchServis()" onfocusout="notFocusSearchServis()" >
+    
+                </div>
+
+                <div class="emlak-ekle-button" >
+                    <i class="fas fa-plus"></i>
+                    <span onclick="window.location = '/bakim/servis-ekle'"  style="padding-left: 10px; cursor: pointer; " >Servis Ekle</span>      
+                </div>
+
+            </div>
+
+            <!-- Ev 1  -->
+
+            {{#each servis}}
+                <div class="emlak-ornek" >
+                    <img id="image" src="{{servis_image}}" style="float: left; border-radius: 10%;" alt="Emlak Örnek Görsel" width="150px" height="120px" >
+
+                    <div style="padding-left: 180px;" >
+                        <span id="servis-name" style="font-size: 24px; font-weight: 550;" >{{name}}</span>
+
+                        <form action="/bakim/sil/{{_id}}" id="servis-sil-form-{{_id}}" style="display: none;" method="GET">
+                        </form>
+                        <i class="fas fa-times-circle" onclick="silServis(`{{_id}}`)" style="cursor: pointer; float: right; margin-right: 10px;" ></i>
+
+                        <br>
+                        <span style="padding-left: 1px; padding-top: 10px; position: absolute;" >Açılış - Kapanış Saati: {{saat}}</span>
+                        <span style="padding-left: 1px; padding-top: 40px; position: absolute;" >Tel : +90 {{tel}}</span>
+                    </div>
+                </div>
+            {{/each}}
+
+        </div>
+    </div>
+</div>
+
+<script src="/js/bakim-servisler/search.js"></script>
+<script src="/js/bakim-servisler/search-servis.js"></script>
+
+
+<script>
+    function silServis(id){
+        if (confirm('Bu emlağı silmek istediğine emin misin?')) {
+            // Save it!
+            $('#servis-sil-form-'+id).submit();
+            console.log('siliniyo');
+        } else {
+        // Do nothing!
+            console.log('Thing was not saved to the database.');
+        }
+    }
+
+
+</script>

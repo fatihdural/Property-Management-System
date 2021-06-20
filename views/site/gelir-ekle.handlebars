@@ -1,0 +1,110 @@
+<div class="wrapper">
+    <div class="sidebar">
+        {{> sidebar}}
+    </div>
+    <div class="main_content">
+        <div class="header">
+            {{> header}}
+        </div>  
+        <div class="info">
+            <div class="baslik-text" >
+                <p style="font-size: x-large; font-weight: 500; margin: 10px 10px 10px 15%;" >Gelir Ekle</p> 
+            </div>
+
+            <!-- Ev 1  -->
+            <div class="emlak-ornek" >
+
+                <form action="/muhasebe/gelir-ekle" method="POST">
+                    <div class="emlak-ornek-text" style="padding-left: 240px;" >
+
+                    <span style="display: inline;" >İşlem Tarihi:</span>
+                    <!-- Surround the select box within a "custom-select" DIV element.
+                    Remember to set the width: -->
+                    <!-- Surround the select box within a "custom-select" DIV element.
+                    Remember to set the width: -->
+                    <div class="kiraci-tarih" style="transform: translateY(-80%);">
+                        <input required type="date" name="tarih" id="kiraci-tarih">
+                    </div>
+
+                    <br><br>
+
+                    <span class="collimate" style="margin-left: 32%;"></span>
+                    <span class="checkbox">
+                        <input type="checkbox" name="kira_geliri_mi" value="evet" id="accept-terms"> Kira Geliri
+                    </span>
+                    <span class="checkbox">
+                        <input type="checkbox" name="kira_geliri_mi" value="hayir" id="accept-terms"> Diğer Gelir
+                    </span>
+                    <br>
+
+
+
+                    <div style="transform: translateY(130%);">Emlak:</div>
+                    <!-- Surround the select box within a "custom-select" DIV element.
+                    Remember to set the width: -->
+                    <div class="custom-select"style="width:250px;">
+                        <select required name="emlak" >
+                        <option value="-" >Seçin</option>
+                        <option value="-" >-</option>
+                        {{#each emlak}}
+                            <option value="{{baslik}}">{{baslik}}</option>
+                        {{/each}}
+                        </select>
+                    </div>
+
+                    <div style="transform: translateY(130%);">İşlem İsmi:</div>
+                    <!-- Surround the select box within a "custom-select" DIV element.
+                    Remember to set the width: -->
+                    <div class="kiraci-box">
+                        <label for="kiraci-input"  class="kiraci-input-label" >Başlık</label>
+                        <input required type="text" class="kiraci-input" name="islem_isim" onfocus="focusSearchKiraci(0)" onfocusout="notfocusSearchKiraci(0)" >
+        
+                    </div>
+
+
+                    <div style="transform: translateY(130%);">İletişim:</div>
+                    <!-- Surround the select box within a "custom-select" DIV element.
+                    Remember to set the width: -->
+                    <div class="custom-select"style="width:250px;">
+                        <select required name="iletisim" >
+                        <option value="-" >Seçin</option>
+                        <option value="-" >-</option>
+                        {{#each kiraci}}
+                            <option value="{{name}}">{{name}}</option>
+                        {{/each}}
+                        {{#each servis}}
+                            <option value="{{name}}">{{name}}</option>
+                        {{/each}}
+
+                        </select>
+                    </div>
+
+
+                    <div style="transform: translateY(130%);">Miktar:</div>
+                    <!-- Surround the select box within a "custom-select" DIV element.
+                    Remember to set the width: -->
+                    <div class="kiraci-box">
+                        <label for="kiraci-input"  class="kiraci-input-label" >...tl</label>
+                        <input required type="text" class="kiraci-input" name="miktar" onfocus="focusSearchKiraci(1)" onfocusout="notfocusSearchKiraci(1)" >
+        
+                    </div>
+
+                    <br><br><br>
+                    <button id="kiraciyi-ekle-button" type="submit" style="display: inline;">Ekle -></button>
+
+                </div>
+            </form>
+
+                
+
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<script src="/js/emlaklar-kiraciyi-ekle/search.js"></script>
+<script src="/js/emlaklar-kiraciyi-ekle/search-kiraci.js"></script>
+<script src="/js/emlaklar-kiraciyi-ekle/select-operation.js"></script>

@@ -1,0 +1,74 @@
+<div class="wrapper">
+    <div class="sidebar">
+        {{> sidebar}}
+    </div>
+    <div class="main_content">
+        <div class="header">
+            {{> header}}
+        </div>  
+        <div class="info">
+            <div class="baslik-text" >
+                <p  style="font-size: x-large; font-weight: 500; margin: 20px 30px 15px 5%; display: inline-block" >Kişi Ekle</p> 
+            </div>
+
+            <br><br><br>
+
+
+
+            <div class="belge-text" >
+                <form action="/kisiler/kisi-ekle" method="POST" id="form-kisi-ekle" enctype="multipart/form-data"></form>
+
+                <div style="transform: translateY(130%);" >İsim Soyisim:</div>
+                <!-- Surround the select box within a "custom-select" DIV element.
+                Remember to set the width: -->
+                <div class="belge-box">
+                    <label class="belge-input-label" >Girin</label>
+                    <input required type="text" form="form-kisi-ekle" class="belge-input" name="name" onfocus="focusSearchKisi(0)" onfocusout="notfocusSearchKisi(0)" >
+                </div>            
+            </div>
+            <br><br>
+
+            <div class="belge-text" >
+                <div style="transform: translateY(130%);" >Tel. No:</div>
+                <!-- Surround the select box within a "custom-select" DIV element.
+                Remember to set the width: -->
+                <div class="belge-box">
+                    <label class="belge-input-label" >Girin</label>
+                    <input required type="text" form="form-kisi-ekle" class="belge-input" name="tel" onfocus="focusSearchKisi(1)" onfocusout="notfocusSearchKisi(1)" >
+                </div>            
+            </div>
+            <br><br>
+
+            <div class="belge-text" >
+                <div style="transform: translateY(130%);" >Mail Adresi:</div>
+                <!-- Surround the select box within a "custom-select" DIV element.
+                Remember to set the width: -->
+                <div class="belge-box">
+                    <label class="belge-input-label" >Girin</label>
+                    <input required type="text" form="form-kisi-ekle" class="belge-input" name="email" onfocus="focusSearchKisi(2)" onfocusout="notfocusSearchKisi(2)" >
+                </div>            
+            </div>
+
+
+            <div id="fileupload">
+                <input id="files-input" form="form-kisi-ekle" name="user_image" type="file" onchange="filesChange(this)">
+                <p id="files-text" >Kişiye ait fotoğrafı seçin ya da sürükleyin.</p>
+                <img id="image" src="/images/icon_upload.png" style="margin-left: 32%;" alt="Emlak Örnek Görsel" width="200px" >
+
+
+                <!--
+                    <button type="submit">Devam Et -></button>
+                -->
+            </div>
+                <button style="display: inline; margin-left: 5%; transform: translateY(-50%);" form="form-kisi-ekle"  type="submit" id="dokuman-yukle-button">Ekle -></button>
+
+
+
+            <br><br><br><br><br><br>
+        </div>
+    </div>
+</div>
+
+<script src="/js/kisiler-kisi-ekle/search.js"></script>
+<script src="/js/kisiler-kisi-ekle/search-kisi.js"></script>
+<script src="/js/kisiler-kisi-ekle/file-upload.js"></script>

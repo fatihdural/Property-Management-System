@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kayıt Ol Ekranı</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet"> </head>
+
+    <link rel="stylesheet" href="/css/{{style}}">
+
+
+<body>
+    <img id="image" src="/images/giris_ekrani_goruntu.png"  alt="Giriş Sol Görsel">
+
+    <div class="yazi-class" >
+        <h1 >EMLAK YÖNETİM PLATFORMU</h1>         
+        <h3>Hesabınızı oluşturmak için lütfen aşağıyı doldurun.</h2><br><br>
+
+        <form id="login-box" action="/login/kayit-ol" method="POST">
+            <div class="user-box">
+              <input type="text" name="name" required="" id="name-input">
+              <label>İsim</label>
+            </div>
+            
+            <div class="user-box">
+                <input type="text" name="surname" required="" id="surname-input">
+                <label>Soyisim</label>
+            </div>
+
+            <div class="user-box">
+                <input type="text" name="username" required="" id="username-input">
+                <label>Kullanıcı adı</label>
+            </div>
+              
+            <div class="user-box">
+                  <input type="text" name="email" required="" id="mail-input">
+                  <label>E-mail</label>
+            </div>
+            
+            <div class="user-box">
+              <input type="password" name="password" required="" id="password-input">
+              <label>Şifre</label>
+            </div>  
+        </form>
+
+        <span class="checkbox">
+            <input  type="checkbox" required name="accept-terms" value="accept-terms" id="accept-terms"> Şartları kabul ediyorum
+        </span><br><br><br><br>
+
+        <button id="register-button" type="submit" form="login-box" style="display: inline; cursor: pointer;">Kayıt Ol</button>
+
+        <span>
+            <a class="giris-yap-text" href="/login"  title="Giriş Yap" 
+            style="color: #4D4F5C;"
+            >
+                Zaten hesabın var mı? Giriş yap.
+            </a>
+        </span>
+    </div> 
+
+
+    
+</body>
+</html>
