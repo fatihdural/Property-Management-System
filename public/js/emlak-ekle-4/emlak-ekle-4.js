@@ -1,0 +1,1 @@
+console.log("Emlak ekle 4")
