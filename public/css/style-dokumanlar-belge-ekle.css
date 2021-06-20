@@ -1,0 +1,132 @@
+#dokuman-yukle-button{
+    background-color: #43425D;
+    width: 150px;
+    height: 50px;
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: medium;
+    border: medium;
+    border-radius: 4px;
+    margin-right: 5%;
+    float: right;
+ 
+    cursor: pointer;
+}
+
+.wrapper .main_content .info .emlak-ornek{
+    display: inline-block;
+    margin: -50px 10px 100px 50%;
+    border-radius: 5px;
+    transform: translateY(-45%);
+    font-size: large;
+    padding: 20px 0px 20px 40px;
+    background: #ffffff;
+}
+
+
+/* UPLOAD FILES */
+.wrapper .main_content .info #fileupload{
+position: relative;
+padding-top: 60px;
+margin-top: -300px;
+margin-left: 65px;
+width: 600px;
+height: 450px;
+border: 2px solid #43425D;
+border-radius: 3px;
+background:white;
+}
+.wrapper .main_content .info #fileupload p{
+width: 100%;
+height: 100%;
+margin-left: 95px;
+text-align: center;
+line-height: 170px;
+color: #43425D;
+font-family: Arial;
+}
+.wrapper .main_content .info #fileupload input{
+position: absolute;
+margin: 0;
+padding: 0;
+width: 100%;
+height: 100%;
+outline: none;
+opacity: 0;
+}
+.wrapper .main_content .info #fileupload button{
+margin: 0;
+color: #fff;
+background: #43425D;
+border: none;
+position: relative;
+transform: translateX(130%);
+width: 208px;
+height: 35px;
+margin-top: -20px;
+margin-left: -4px;
+border-radius: 4px;
+transition: all .2s ease;
+outline: none;
+}
+.wrapper .main_content .info #fileupload button:hover{
+    background: #36354d;
+    color: #ffffff;
+}
+.wrapper .main_content .info #fileupload button:active{
+border:0;
+}
+
+
+
+.belge-text{
+    margin-left: 60%;
+}
+
+.belge-box {
+    position: relative;
+    display: inline-block;
+    background-color: #4D4F5C;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    margin-left: 200px;
+    width: 250px;
+    height: 40px;
+}
+
+.belge-box input {
+    width: 7%;
+    padding: 3px 0px;
+    width: 250px;
+    height: 40px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-bottom: 0px solid #70769b;
+    outline: none;
+    background: transparent;
+}
+
+
+.belge-box label {
+    position: absolute;
+    text-align: left;
+    padding-left: 15px;
+    padding-top: 5px;
+    top:0;
+    left: 0;
+    width: 250px;
+    height: 40px;
+    font-size: 16px;
+    color: white;
+    pointer-events: none;
+    transition: .5s;
+}
+.belge-box input:focus ~ label,
+.belge-box input:valid ~ label {
+    top: -20px;
+    color: white;
+    font-size: 12px;
+    display: none;
+}

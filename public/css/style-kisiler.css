@@ -1,0 +1,21 @@
+.wrapper .main_content .info .emlak-ekle-button {
+    display: inline;
+    border-radius: 3px;
+    color: rgb(255, 255, 255);
+    font-size: large;
+    background: #1062E5;
+    padding: 15px;
+}
+
+.wrapper .main_content .info .emlak-ornek {
+    margin: 20px 10px 10px 50px;
+    display: inline-block;
+    width: 550px;
+    height: 170px;
+    border-radius: 5px;
+    font-size: large;
+    padding: 20px 10px 10px 10px;
+    background: #ffffff;
+    background-color: white;
+}
+

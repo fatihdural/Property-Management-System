@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+img {
+    background: url(bg-1.jpg);
+    background-repeat: no-repeat;
+    width: 50%;
+    position: absolute;
+    left: 0px;
+    height: 100%;
+}
+.yazi-class {
+    text-align: center;
+    background-repeat: no-repeat;
+    width: 50%;
+    position: absolute;
+    height: 100%;
+    right: 0px;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #4D4F5C;
+
+}
+.yazi-class input{
+    align-content: center;
+}
+.yazi-class h1{
+    color: #43425D;
+    letter-spacing: 4px;
+    margin-top: 20%;
+    border: 0;
+    
+}
+.yazi-class h3{
+    opacity: 0.5;
+    font-weight: normal;
+}
+#login-button{
+    background-color: #43425D;
+    width: 150px;
+    height: 50px;
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: medium;
+    border: medium;
+    border-radius: 4px;
+    margin-right: 5%;
+}
+#register-button{
+    background-color: white;
+    width: 150px;
+    height: 50px;
+    color: #4D4F5C;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: medium;
+    border-color: #43425D;
+    border-width: medium;
+    border-radius: 4px;
+}
+.kullanim-kosulu{
+    color: #4D4F5C;
+    position: absolute;             
+    bottom:0;    
+    left: 35%;
+    margin-bottom: 10px;
+}
+.checkbox{
+    margin-right: 15%;
+}
+
+
+.user-box {
+    position: relative;
+}
+
+.user-box input {
+    width: 50%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #4D4F5C;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #70769b;
+    outline: none;
+    background: transparent;
+}
+
+.user-box label {
+    position: absolute;
+    text-align: center;
+    top:0;
+    left: 25%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #4D4F5C;
+    pointer-events: none;
+    transition: .5s;
+}
+.user-box input:focus ~ label,
+.user-box input:valid ~ label {
+    top: -20px;
+    color: #4D4F5C;
+    font-size: 12px;
+}
+
+.sifremi-unuttum:hover{
+    color: white
+}

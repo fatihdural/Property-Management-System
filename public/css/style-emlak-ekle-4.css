@@ -1,0 +1,107 @@
+#emlak-yukle-button {
+    background-color: #43425D;
+    width: 150px;
+    height: 50px;
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: medium;
+    border: medium;
+    border-radius: 4px;
+    margin-right: 5%;
+    margin-top: 100px;
+    right: 0;
+    cursor: pointer;
+}
+
+
+
+
+.progressbar-container {
+    width: 600px;
+    margin: -40px 0px 0px 35%
+}
+
+.progressbar {
+    counter-reset: step;
+}
+
+.progressbar li {
+    list-style-type: none;
+    width: 25%;
+    float: left;
+    font-size: 12px;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    color: #7d7d7d;
+}
+
+.progressbar li:before {
+    width: 30px;
+    height: 30px;
+    content: counter(step);
+    counter-increment: step;
+    line-height: 30px;
+    border: 2px solid #7d7d7d;
+    display: block;
+    text-align: center;
+    margin: 0 auto 10px auto;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.progressbar li:after {
+    width: 100%;
+    height: 2px;
+    content: '';
+    position: absolute;
+    background-color: #7d7d7d;
+    top: 15px;
+    left: -50%;
+    z-index: -1;
+}
+
+.progressbar li:first-child:after {
+    content: none;
+}
+
+.progressbar li.active {
+    color: green;
+}
+
+.progressbar li.active:before {
+    border-color: #55b776;
+}
+
+.progressbar li.active+li:after {
+    background-color: #55b776;
+}
+
+
+.ozellikler-tablo {
+    display: block;
+    width: 1050px;
+    background: white;
+    padding: 10px 0px 30px 20px;
+    margin-left: 65px;
+    border-radius: 5px;
+    border: 2px solid #7d7d7d;
+
+}
+
+.ozellikler-tablo .ozellik {
+    display: inline-block;
+    width: 200px;
+    margin-top: 5px;
+
+}
+
+.ozellikler-tablo .ozellik .checkbox {
+    position: relative;
+    border-radius: 100%;
+    margin-left: 5%;
+}
+
+.ozellikler-tablo .ozellik .checkbox input {
+    border-radius: 50%;
+}

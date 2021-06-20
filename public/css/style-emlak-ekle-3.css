@@ -1,0 +1,200 @@
+.emlak-box {
+    position: relative;
+    display: inline-block;
+    background-color: #4D4F5C;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    margin-left: 180px;
+    width: 250px;
+    height: 40px;
+}
+
+.emlak-box input {
+    width: 7%;
+    padding: 3px 0px;
+    width: 250px;
+    height: 40px;
+    font-size: 16px;
+    color: white;
+
+    border: none;
+    border-bottom: 0px solid #70769b;
+    outline: none;
+    background: transparent;
+}
+
+
+.emlak-box label {
+    position: absolute;
+    text-align: left;
+    padding-left: 15px;
+    padding-top: 5px;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 40px;
+    font-size: 16px;
+    color: white;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.emlak-box input:focus~label,
+.emlak-box input:valid~label {
+    top: -20px;
+    color: white;
+    font-size: 12px;
+    display: none;
+}
+
+#emlak-devam-button {
+    background-color: #43425D;
+    width: 150px;
+    height: 50px;
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: medium;
+    border: medium;
+    border-radius: 4px;
+    margin-right: 5%;
+    margin-top: 100px;
+    right: 0;
+    cursor: pointer;
+}
+
+
+
+.wrapper .main_content .info .emlak-ornek {
+    display: inline-block;
+    margin: -50px 10px 100px 50%;
+    border-radius: 5px;
+    transform: translateY(-45%);
+    font-size: large;
+    padding: 20px 0px 20px 40px;
+    background: #ffffff;
+}
+
+.progressbar-container {
+    width: 600px;
+    margin: -40px 0px 0px 35%
+}
+
+.progressbar {
+    counter-reset: step;
+}
+
+.progressbar li {
+    list-style-type: none;
+    width: 25%;
+    float: left;
+    font-size: 12px;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    color: #7d7d7d;
+}
+
+.progressbar li:before {
+    width: 30px;
+    height: 30px;
+    content: counter(step);
+    counter-increment: step;
+    line-height: 30px;
+    border: 2px solid #7d7d7d;
+    display: block;
+    text-align: center;
+    margin: 0 auto 10px auto;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.progressbar li:after {
+    width: 100%;
+    height: 2px;
+    content: '';
+    position: absolute;
+    background-color: #7d7d7d;
+    top: 15px;
+    left: -50%;
+    z-index: -1;
+}
+
+.progressbar li:first-child:after {
+    content: none;
+}
+
+.progressbar li.active {
+    color: green;
+}
+
+.progressbar li.active:before {
+    border-color: #55b776;
+}
+
+.progressbar li.active+li:after {
+    background-color: #55b776;
+}
+
+/* UPLOAD FILES */
+.wrapper .main_content .info form {
+    position: absolute;
+    top: 50%;
+    padding-top: 60px;
+    margin-top: -100px;
+    margin-left: 200px;
+    width: 750px;
+    height: 450px;
+    border: 2px solid #43425D;
+    border-radius: 3px;
+    background: white;
+}
+
+.wrapper .main_content .info form p {
+    width: 100%;
+    height: 100%;
+    margin-left: 160px;
+    text-align: center;
+    line-height: 170px;
+    color: #43425D;
+    font-family: Arial;
+}
+
+.wrapper .main_content .info form input {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    opacity: 0;
+}
+
+.wrapper .main_content .info form button {
+    margin: 0;
+    color: #fff;
+    background: #43425D;
+    border: none;
+    position: relative;
+    transform: translateX(130%);
+    width: 208px;
+    height: 35px;
+    margin-top: -20px;
+    margin-left: -4px;
+    border-radius: 4px;
+    transition: all .2s ease;
+    outline: none;
+}
+
+.wrapper .main_content .info form button:hover {
+    background: #36354d;
+    color: #ffffff;
+}
+
+.wrapper .main_content .info form button:active {
+    border: 0;
+}
+
+.new-text-design {
+    text-align: center;
+}

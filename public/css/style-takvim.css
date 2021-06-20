@@ -1,0 +1,272 @@
+#dokuman-yukle-button {
+    background-color: #43425D;
+    width: 150px;
+    height: 50px;
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: medium;
+    border: medium;
+    border-radius: 4px;
+    margin-right: 5%;
+    float: right;
+
+    cursor: pointer;
+}
+
+.wrapper .main_content .info .emlak-ornek {
+    display: inline-block;
+    margin: -50px 10px 100px 50%;
+    border-radius: 5px;
+    transform: translateY(-45%);
+    font-size: large;
+    padding: 20px 0px 20px 40px;
+    background: #ffffff;
+}
+
+
+/* UPLOAD FILES */
+.wrapper .main_content .info form {
+    position: relative;
+    padding-top: 60px;
+    margin-top: -300px;
+    margin-left: 65px;
+    width: 600px;
+    height: 450px;
+    border: 2px solid #43425D;
+    border-radius: 3px;
+    background: white;
+}
+
+.wrapper .main_content .info form p {
+    width: 100%;
+    height: 100%;
+    margin-left: 145px;
+    text-align: center;
+    line-height: 170px;
+    color: #43425D;
+    font-family: Arial;
+}
+
+.wrapper .main_content .info form input {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    opacity: 0;
+}
+
+.wrapper .main_content .info form button {
+    margin: 0;
+    color: #fff;
+    background: #43425D;
+    border: none;
+    position: relative;
+    transform: translateX(130%);
+    width: 208px;
+    height: 35px;
+    margin-top: -20px;
+    margin-left: -4px;
+    border-radius: 4px;
+    transition: all .2s ease;
+    outline: none;
+}
+
+.wrapper .main_content .info form button:hover {
+    background: #36354d;
+    color: #ffffff;
+}
+
+.wrapper .main_content .info form button:active {
+    border: 0;
+}
+
+
+
+.belge-text {
+    margin-left: 60%;
+}
+
+.belge-box {
+    position: relative;
+    display: inline-block;
+    background-color: #4D4F5C;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    margin-left: 200px;
+    width: 250px;
+    height: 40px;
+}
+
+.belge-box input {
+    width: 7%;
+    padding: 3px 0px;
+    width: 250px;
+    height: 40px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-bottom: 0px solid #70769b;
+    outline: none;
+    background: transparent;
+}
+
+
+.belge-box label {
+    position: absolute;
+    text-align: left;
+    padding-left: 15px;
+    padding-top: 5px;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 40px;
+    font-size: 16px;
+    color: white;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.belge-box input:focus~label,
+.belge-box input:valid~label {
+    top: -20px;
+    color: white;
+    font-size: 12px;
+    display: none;
+}
+
+/* TAKVİM STYLE BAŞLANGIÇ */
+
+@import url(https://fonts.googleapis.com/css?family=Fjalla+One:400|Roboto:400,400italic,700);
+
+
+.jzdbox1 {
+    width: 900px;
+    background: #332f2e;
+    border-radius: 5px;
+    overflow: hidden;
+    display: block;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px #201d1c;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.jzdcal {
+    padding: 20px 10px 10px 10px;
+    box-sizing: border-box !important;
+    background: #749d9e;
+    background: -webkit-linear-gradient(#749d9e, #b3a68b) !important;
+    background: -o-linear-gradient(#749d9e, #b3a68b) !important;
+    background: -moz-linear-gradient(#749d9e, #b3a68b) !important;
+    background: linear-gradient(#749d9e, #b3a68b) !important;
+}
+
+.jzdcalt {
+    font: 30px 'Roboto';
+    font-weight: 700;
+    color: #f7f3eb;
+    display: block;
+    margin: 8px 0 18px 0;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.jzdcal span {
+    font: 22px 'Roboto';
+    font-weight: 400;
+    color: #f7f3eb;
+    text-align: center;
+    width: 112px;
+    height: 102px;
+    display: inline-block;
+    float: left;
+    line-height: 40px;
+}
+
+.jzdcal .jzdb:before {
+    opacity: 0.3;
+    content: 'o';
+}
+
+.circle {
+    border: 2px solid #f7f3eb;
+    box-sizing: border-box !important;
+    transform: translateY(-30%);
+    padding-top: 3%;
+    border-radius: 50%;
+}
+
+span[data-title]:hover:after,
+div[data-title]:hover:after {
+    font: 12px 'Roboto';
+    font-weight: 400;
+    content: attr(data-title);
+    position: absolute;
+    margin: 50px 30px 0px -20px;
+    background: #282423;
+    border: 1px solid #f7f3eb;
+    color: #f7f3eb;
+    padding: 5px;
+    z-index: 9999;
+    min-width: 150px;
+}
+
+/* TAKVİM STYLE BİTİŞ */
+
+
+/* ETKİNLİK EKLE */
+#calendar{
+
+}
+
+.etkinlik-ekle{
+    display: inline-block;
+    padding: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: medium;
+    border: medium;
+    border-radius: 4px;
+    background-color: #ffffff;
+
+}
+
+#etkinlik-ekle-button {
+    background-color: #43425D;
+    width: 150px;
+    height: 50px;
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: medium;
+    border: medium;
+    border-radius: 4px;
+    margin-right: 5%;
+    cursor: pointer;
+}
+
+.etkinlik-sil{
+    display: inline-block;
+    padding: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: medium;
+    border: medium;
+    border-radius: 4px;
+    background-color: #ffffff;
+
+}
+
+#etkinlik-sil-button {
+    background-color: #43425D;
+    width: 150px;
+    height: 50px;
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: medium;
+    border: medium;
+    border-radius: 4px;
+    margin-right: 5%;
+    cursor: pointer;
+}

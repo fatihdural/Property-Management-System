@@ -1,0 +1,182 @@
+/* ekstra masraf vs input */
+.kiraci-box {
+    position: relative;
+    display: inline-block;
+    background-color: #4D4F5C;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    margin-left: 180px;
+    width: 250px;
+    height: 40px;
+}
+
+.kiraci-box input {
+    width: 7%;
+    padding: 3px 0px;
+    width: 250px;
+    height: 40px;
+    font-size: 16px;
+    color: white;
+
+    border: none;
+    border-bottom: 0px solid #70769b;
+    outline: none;
+    background: transparent;
+}
+
+
+.kiraci-box label {
+    position: absolute;
+    text-align: left;
+    padding-left: 15px;
+    padding-top: 5px;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 40px;
+    font-size: 16px;
+    color: white;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.kiraci-box input:focus~label,
+.kiraci-box input:valid~label {
+    top: -20px;
+    color: white;
+    font-size: 12px;
+    display: none;
+}
+
+/* ekstra masraf vs input end */
+
+
+
+.wrapper .main_content .info .emlak-ornek {
+    margin: 20px 10px 100px 15%;
+    display: inline-block;
+    border-radius: 5px;
+    font-size: large;
+    padding: 40px 50px 30px 40px;
+    background: #ffffff;
+}
+
+
+/* SEÇME İŞLEMİ   */
+/* The container must be positioned relative: */
+.custom-select {
+    position: relative;
+    margin-left: 180px;
+    font-family: Arial;
+    background-color: #4D4F5C;
+}
+
+.custom-select select {
+    display: none;
+    /*hide original SELECT element: */
+
+}
+
+.select-selected {
+    background-color: #4D4F5C;
+
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,
+.select-selected {
+    color: #ffffff;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+}
+
+.select-items::before {
+    background-color: brown;
+}
+
+/* Style items (options): */
+.select-items {
+    position: relative;
+    background-color: #4D4F5C;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+    display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.checkbox {
+    position: relative;
+    border-radius: 50%;
+    margin-left: 10%;
+}
+
+.checkbox input {
+    border-radius: 50%;
+}
+
+
+
+.wrapper .main_content .info .emlak-ornek .kiraci-tarih {
+    margin-left: 42%;
+    display: inline-block;
+}
+
+.wrapper .main_content .info .emlak-ornek .kiraci-tarih input {
+    border-radius: 5px;
+    background-color: #4D4F5C;
+    color: white;
+    padding: 3px 5px;
+    padding-left: 10px;
+    width: 250px;
+    height: 40px;
+}
+
+.wrapper .main_content .info .emlak-ornek .emlak-ornek-text {
+    display: inline-block;
+    margin-right: 50px;
+}
+
+
+#kiraciyi-ekle-button {
+    background-color: #43425D;
+    width: 150px;
+    height: 50px;
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: medium;
+    border: medium;
+    border-radius: 4px;
+    margin-right: 5%;
+    cursor: pointer;
+}

@@ -1,0 +1,181 @@
+.wrapper .main_content .info .emlak-ornek {
+    display: inline-block;
+    margin: -50px 10px 100px 50%;
+    border-radius: 5px;
+    transform: translateY(-45%);
+    font-size: large;
+    padding: 20px 0px 20px 40px;
+    background: #ffffff;
+}
+
+
+
+/* İSLEM TABLOSU */
+.belge-tablosu {
+    margin-bottom: 100px;
+}
+
+/* BELGE TABLOSU BAŞLIK */
+
+.belge-tablosu-baslik {
+    margin-left: 65px;
+    background-color: #b4b4b6;
+    padding: 10px;
+    display: inline-block;
+    width: 800px;
+}
+
+.belge-tablosu-baslik span {
+    color: white;
+}
+
+.belge-tablosu-baslik span:nth-child(1) {
+    display: inline-block;
+    margin-left: 40px;
+    width: 250px;
+}
+
+.belge-tablosu-baslik span:nth-child(2) {
+    display: inline-block;
+    width: 350px;
+}
+
+.belge-tablosu-baslik span:nth-child(3) {
+    display: inline-block;
+    width: 110px;
+}
+
+/* BELGE TABLOSU SATIR */
+
+.belge-tablosu-satir {
+    margin-left: 65px;
+    display: inline-block;
+    background-color: white;
+    padding: 10px;
+    padding-bottom: 15px;
+    width: 800px;
+    padding-left: 15px;
+    cursor: pointer;
+}
+
+.belge-tablosu-satir span:nth-child(1) {
+    display: inline-block;
+    margin-left: 10px;
+    width: 290px;
+}
+
+.belge-tablosu-satir span:nth-child(2) {
+    display: inline-block;
+    width: 330px;
+}
+
+.belge-tablosu-satir span:nth-child(3) {
+    display: inline-block;
+    width: 110px;
+
+}
+
+.belge-tablosu-satir span:nth-child(4) {
+    display: inline-block;
+    width: 150px;
+
+}
+
+
+/* UST CONTAINER, FİLTRE, ARAMA, GELİR-GİDER EKLEME */
+
+.ust-container {
+    margin-left: 65px;
+    margin-bottom: 30px;
+    margin-top: -30px;
+}
+
+.ust-container span {
+    margin-left: 0px;
+}
+
+
+/* MUHASEBE İÇİ ARAMA */
+
+.ust-container span:nth-child(1) {
+    margin-left: 300px;
+}
+
+.belge-box {
+    position: relative;
+    display: inline;
+}
+
+.belge-box input {
+    width: 7%;
+    padding: 3px 0px;
+
+    font-size: 16px;
+    color: #4D4F5C;
+    border: none;
+    border-bottom: 0px solid #70769b;
+    outline: none;
+    background: transparent;
+}
+
+
+.belge-box label {
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 0;
+    font-size: 16px;
+    color: #4D4F5C;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.belge-box input:focus~label,
+.belge-box input:valid~label {
+    top: -20px;
+    color: #4D4F5C;
+    font-size: 12px;
+    display: none;
+}
+
+
+
+/* BELGE EKLE */
+
+.ust-container span:nth-child(2) {
+    background-color: #72CA89;
+    color: white;
+    padding: 10px;
+    border: medium;
+    padding-right: 20px;
+    border-radius: 4px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: large;
+    cursor: pointer;
+    margin-left: 25px;
+}
+
+.ust-container span:nth-child(2) p:nth-child(1) {
+    margin-right: 10px;
+    font-size: 24px;
+}
+
+/* BELGE SİL */
+
+.ust-container span:nth-child(3) {
+    background-color: #db3012;
+    color: white;
+    padding: 10px;
+    padding-right: 20px;
+    border: medium;
+    border-radius: 4px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: large;
+    cursor: pointer;
+    margin-left: 40px;
+}
+
+.ust-container span:nth-child(3) p:nth-child(1) {
+    margin-right: 10px;
+    font-size: 24px;
+}
