@@ -1,6 +1,14 @@
 # Property-Management-System
 This is a full stack web project. Technologies such as node.js, express.js, mongo.db, css, jquery were used.
 
+## Dashboard
+![gosterge_paneli](https://user-images.githubusercontent.com/23129403/137640387-f120cf20-3e8e-4b79-b01a-b951c489dbbe.jpg)
+
+## Register
+![kayit_ol](https://user-images.githubusercontent.com/23129403/137640455-7f55281b-2ef4-462b-b1b8-4585d898df5c.png)
+
+## Accounting
+![muhasebe](https://user-images.githubusercontent.com/23129403/137640559-e931ec38-56f5-4b9d-8264-6ad9b03ffb78.png)
 
 Turkish installation
 
